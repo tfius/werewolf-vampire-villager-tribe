@@ -26,11 +26,11 @@ class Village:
         if warewolves.__len__() >= villagers.__len__() + vampires.__len__():
             self.governance = "w"; #"werewolves win"
         # if more vampires then villagers and werewolves
-        if vampires.__len__() >= villagers.__len__() + warewolves.__len__():
+        if vampires.__len__() >= villagers.__len__(): # + warewolves.__len__():
             self.governance = "v" # "vampires win"
         # if more villagers then vampires and werewolves
         if villagers.__len__() >= vampires.__len__() + warewolves.__len__():
-            self.governance = "v" # "villagers win"
+            self.governance = "n" # "villagers win"
     
     def update(self):
         # Update village state, e.g., switch between day and night       

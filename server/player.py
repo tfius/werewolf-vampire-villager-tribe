@@ -172,16 +172,16 @@ class Player:
         # all things must die
         # warewolf loses life if they did not attack
         if self.role == "w": 
-            if not night:
+            if night:
                if self.has_acted:
                   self.change_life(-DIE_RATE)
                self.has_acted = False
 
         # vampire loses life if they did not attack 
         if self.role == "v":
-            if night:
+            if not night:
                if self.has_acted:
-                  self.change_life(DIE_RATE)
+                  self.change_life(-DIE_RATE)
                self.has_acted = False
             
         if self.role == "n": 
@@ -199,6 +199,9 @@ class Player:
            self.has_voted = False
 
         if self.defend != None and self.role != "n":
-           self.defend = None
+           if night and self.role == "w":
+              self.defend = None
+           if not night and self.role == "v":
+              self.defend = None
 
         pass
