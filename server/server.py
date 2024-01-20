@@ -103,8 +103,13 @@ class GameServer:
             # split command into command name and argument from ("Enter command (a)ttack player (d)efend from player (v)ote player (c)hat text (q)uit ")
             cmd = incoming.split(" ")
             command = cmd[0]
+            argument = None
             # argument is index of player to attack, defend, vote, chat
-            argument = cmd[1] if cmd.__len__() >= 1 else None
+            try: 
+               argument = cmd[1] if cmd.__len__() >= 1 else None
+            except Exception as e:
+                pass
+
             try:           
                 if command == "a":
                    result = player.attack(self.game, int(argument))

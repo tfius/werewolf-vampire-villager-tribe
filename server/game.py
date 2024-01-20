@@ -27,7 +27,7 @@ class Game:
 
     def add_player(self, player):
         self.players.append(player)
-        if(self.villages[-1].players.__len__() >= 5):
+        if(self.villages[-1].players.__len__() >= 10):
            self.add_village()
            
         # Assign the player to a village (simplified for this example)

@@ -1,6 +1,8 @@
 import random 
 from village import Village
 
+KILL_RATE = 1
+DIE_RATE = 1
 class Player:
     def __init__(self, player_id):
         self.id = player_id
@@ -78,47 +80,47 @@ class Player:
             
         other_player = self.village.get_players()[villager_idx]
         if(other_player == self.defend):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
             return "defended"
-        if(other_player == self and self.role == "n"):
+        if(other_player == self and self.role != "n"):
             return "cannot attack self " + self.role; 
 
         # normals beat werewolves and vampires at day, beat normals anytime
         if(self.role == "n"):
           if(other_player.role == "n"):
-            other_player.change_life(-1)
-            self.change_life(-1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(-KILL_RATE)
           elif(other_player.role == "w"):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
           elif(other_player.role == "v"):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
 
         # vampires lose against werewolves and vampires, beat normals
         if(self.role == "v"):
           if(other_player.role == "w"):
-            other_player.change_life(1)
-            self.change_life(-1)
+            other_player.change_life(KILL_RATE)
+            self.change_life(-KILL_RATE)
           elif(other_player.role == "v"):
-            other_player.change_life(1)
-            self.change_life(1)
+            other_player.change_life(KILL_RATE)
+            self.change_life(KILL_RATE)
           elif(other_player.role == "n"):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
             
         # werewolves beat werewolves, beat vampires at day and normals at night
         if(self.role == "w"):
           if(other_player.role == "w"):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
           elif(other_player.role == "v" and not self.village.night):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
           elif(other_player.role == "n" and self.village.night):
-            other_player.change_life(-1)
-            self.change_life(1)
+            other_player.change_life(-KILL_RATE)
+            self.change_life(KILL_RATE)
 
         # other_player.change_life(-1)
         self.has_acted = True
@@ -162,27 +164,29 @@ class Player:
     def live(self, night):
         # Process player life logic
         # all things must die
-        # warewolf loses life if they did not attack villager
+        # warewolf loses life if they did not attack
         if self.role == "w": 
-            if not night and not self.has_acted:
-                self.change_life(-1)
-            if night and self.has_acted:
-                self.change_life(1)
+            if not night:
+               if self.has_acted:
+                  self.change_life(-DIE_RATE)
+               self.has_acted = False
 
-        # vampire loses life if they did not attack villager
+        # vampire loses life if they did not attack 
         if self.role == "v":
-            if not night and self.has_acted:
-                self.change_life(1)
-            if night and not self.has_acted:
-                self.change_life(-1)
+            if night:
+               if self.has_acted:
+                  self.change_life(DIE_RATE)
+               self.has_acted = False
             
-        if self.role == "n" and self.has_acted:
-            self.change_life(1)
-        else 
-            self.change_life(-1)
+        if self.role == "n": 
+            if self.has_acted:
+               self.change_life(DIE_RATE)
+            else:
+               self.change_life(-DIE_RATE)
+            self.has_acted = False
                
         # self.change_life(-10)
-        self.has_acted = False
+        # self.has_acted = False
 
         if not night:
            self.has_voted = False

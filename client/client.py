@@ -11,6 +11,13 @@ names = {
     "v": "Vampire",
 }
 
+# def print_at_position(text, x=0, y=0):
+#      # Move the cursor to the position (x, y)
+#      print(f'\033[{y};{x}H{text}', end='', flush=True)
+
+# Print 'Hello, world!' at position (5, 10)
+# print_at_position('Hello, world!', 5, 10)
+
 def get_input():
     while True:
         key = input("Enter command (a)ttack [villager] (d)efend [villager] (v)ote [villager] (m)ove [village] (c)hat (q)uit ")
@@ -75,12 +82,12 @@ async def listen_for_messages(reader, writer, player: Player):
                     if myplayer["l"] != player.life:
                        player.life = myplayer["l"]
                        # player.alive = myplayer["a"]
-                       print(f"My {names[player.role]} life is {player.life} ")
+                       print(f"My {names[player.role]} life is {player.life}")
                        if myplayer["a"] != player.alive:
-                        player.alive = myplayer["a"]
-                        print(f"State of {names[player.role]} is {player.alive} (R)evive ? ")
+                          player.alive = myplayer["a"]
+                          print(f"State of {names[player.role]} is {player.alive} (R)evive ? ")
 
-
+ 
 
                 # check if message is a command
                 if "command" in data:
