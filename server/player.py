@@ -27,7 +27,6 @@ class Player:
         }
         return state 
 
-
     def assign_role(self, role):
         self.role = role
 
@@ -37,6 +36,8 @@ class Player:
     def revive(self, game):
         self.alive = True
         self.life = 100
+        self.ballots = 0
+        self.defend = None
         # move to random village
         self.move(game, random.randint(0, game.villages.__len__()))
         return "revived"
@@ -148,9 +149,10 @@ class Player:
         self.village.remove_player(self)
         self.village = game.villages[village_idx]
         self.village.add_player(self)
+
         # villager can move without acting if not previously acted
-        if self.role == "w" or self.role == "v":
-           self.has_acted = True
+        # if self.role == "w" or self.role == "v":
+        #    self.has_acted = True
 
         return "moved to village " + str(village_idx)
     
