@@ -110,39 +110,34 @@ class GameServer:
             except Exception as e:
                 pass
 
-            try:           
-                if command == "a":
-                   result = player.attack(self.game, int(argument))
-                   pass 
-                elif command == "m": # move to village
+            try:
+                match command:
+                  case "a": # act
+                    result = player.attack(self.game, int(argument))  
+                  case "m": # move to village
                     result = player.move(self.game, int(argument))
-                    pass
-                elif command == "d":
+                  case "d": # defend from player in village
                     result = player.defense(self.game, int(argument))
-                    pass
-                elif command == "v":
-                   result = player.vote(self.game, int(argument))
-                   pass
-                elif command == "c":
+                  case "v": # vote for player in village
+                    result = player.vote(self.game, int(argument))
+                  case "i": # inspect village
+                    result = player.inspect(self.game, int(argument))  
+
+                  case "c":
                     # player.chat()
-                    pass
-                elif command == "r":
+                    pass    
+                  case "r":
                     if not player.alive:
-                       player.revive(self.game)
-                       self.game.assign_new_role(player)
-                       result = "resurected"
-                    else: 
-                       result = "still alive"
-                    # player.chat()
-                    pass
-                else:
-                    print("Unknown command.")
+                          self.game.assign_new_role(player)
+                          result = player.revive(self.game)
+                  case _: 
+                    result = "Unknown command"
                 
             except ValueError:
                 print(f"Cannot convert {argument} to integer")
             except Exception as e:
                 print(f"Error: {e}")
-                result = "cannot perform action"
+                result = "cannot perform action " + f"Error: {e}"
                 pass
 
         print(f"{player.id} {data} result {result}")

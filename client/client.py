@@ -49,7 +49,7 @@ class Player:
 
 async def listen_for_messages(reader, writer, player: Player):
     while True:
-        data = await reader.read(1024)
+        data = await reader.read(4096)
         if data:
             message = data.decode()
             # print(f"Client received: {message}")
@@ -81,13 +81,10 @@ async def listen_for_messages(reader, writer, player: Player):
                     # if life is different update myplayer
                     if myplayer["l"] != player.life:
                        player.life = myplayer["l"]
-                       # player.alive = myplayer["a"]
                        print(f"My {names[player.role]} life is {player.life}")
                        if myplayer["a"] != player.alive:
                           player.alive = myplayer["a"]
                           print(f"State of {names[player.role]} is {player.alive} (R)evive ? ")
-
- 
 
                 # check if message is a command
                 if "command" in data:
@@ -96,12 +93,6 @@ async def listen_for_messages(reader, writer, player: Player):
                     if command == "quit":
                         print("Quitting...")
                         break
-                    elif command == "attack":
-                        print("Attacking...")
-                    elif command == "defend":
-                        print("Defending...")
-                    else:
-                        print("Unknown command.")
             except Exception as e:
                 print(f"Error: {e}")
                 pass

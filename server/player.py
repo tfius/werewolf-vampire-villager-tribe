@@ -39,7 +39,7 @@ class Player:
         self.life = 100
         # move to random village
         self.move(game, random.randint(0, game.villages.__len__()))
-        return self
+        return "revived"
     
     def defense(self, game, villager_idx: int):
         if not self.alive:
@@ -66,18 +66,11 @@ class Player:
         if self.has_acted:
             return "already acted"
         
-        if self.role == "n" and not self.village.night:
-            return "not day v"
-        if self.role == "v" and self.village.night:
+        if self.role == "v" and not self.village.night:
             return "not night v"
-        
-        # if self.role == "v": # vampiers can only attack at night
-        #     if not self.village.night:
-        #         return "not night v"
-        # if self.role == "n": # normal can only attack at day
-        #     if self.village.night:
-        #         return "not day n"
-            
+        if self.role == "n" and self.village.night:
+            return "not day n"
+                   
         other_player = self.village.get_players()[villager_idx]
         if(other_player == self.defend):
             other_player.change_life(-KILL_RATE)
@@ -155,12 +148,23 @@ class Player:
         self.village.remove_player(self)
         self.village = game.villages[village_idx]
         self.village.add_player(self)
-        # villager cant move without acting if not previously acted
-        if role.role == "w" or role.role == "v":
+        # villager can move without acting if not previously acted
+        if self.role == "w" or self.role == "v":
            self.has_acted = True
 
         return "moved to village " + str(village_idx)
     
+    def inspect(self, game, villager_idx: int):
+        other_player = self.village.get_players()[villager_idx]
+
+        game_state = {
+            "v": other_player.village.id,
+            "t": other_player.village.time,
+            "n": other_player.village.night,
+            "p": [ player.state() for player in other_player.village.players]
+        }
+        return game_state
+
     def live(self, night):
         # Process player life logic
         # all things must die
@@ -182,7 +186,8 @@ class Player:
             if self.has_acted:
                self.change_life(DIE_RATE)
             else:
-               self.change_life(-DIE_RATE)
+               if night:
+                  self.change_life(-DIE_RATE)
             self.has_acted = False
                
         # self.change_life(-10)
