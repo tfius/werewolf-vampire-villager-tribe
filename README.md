@@ -22,6 +22,8 @@ The game continues until all the werewolves are eliminated or the werewolves out
   - Vampires slowly die if not acted during night 
   - Werewolfs slowly die if acted during day
   - Villagers gain life if acted and die during night
+- voting during day 
+- elimination in the morning 
 
 ***Game highlights the challenge an uninformed majority (the villagers) faces against an informed minority (the werewolves).*** 
 

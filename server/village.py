@@ -16,6 +16,7 @@ class Village:
     def get_players(self):
         return self.players
     
+    # see who is winning in the village
     def governance(self):
         # count warewolves
         warewolves = [p for p in self.players if p.role == "w"]
