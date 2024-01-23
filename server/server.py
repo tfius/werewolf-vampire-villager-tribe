@@ -78,7 +78,7 @@ class GameServer:
                 print(f"from {addr} received {message}")               
                 asyncio.create_task(self.process(writer, new_player, message))
 
-        except asyncio.CancelledError:
+        except (asyncio.CancelledError, asyncio.BrokenPipeError):
             print(f"Canceled Error {addr}")
             pass
         except Exception as e:
