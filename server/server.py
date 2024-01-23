@@ -36,10 +36,6 @@ class GameServer:
         self.players = {}  # List of Player objects
         self.game = Game()
 
-    async def add_village(self, village):
-        self.game.add_village(village)
-
-    # start server
     async def start_server(self):
         server = await asyncio.start_server(self.handle_client, self.host, self.port)
         addr = server.sockets[0].getsockname()

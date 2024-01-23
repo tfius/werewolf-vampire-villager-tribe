@@ -14,13 +14,6 @@ names = {
     "v+e": "Vampire Eliminated",
 }
 
-# def print_at_position(text, x=0, y=0):
-#      # Move the cursor to the position (x, y)
-#      print(f'\033[{y};{x}H{text}', end='', flush=True)
-
-# Print 'Hello, world!' at position (5, 10)
-# print_at_position('Hello, world!', 5, 10)
-
 def get_input():
     while True:
         key = input("Enter command (a)ttack [villager] (d)efend [villager] (v)ote [villager] (m)ove [village] (c)hat (q)uit ")
@@ -50,14 +43,6 @@ class Player:
         } 
         return state
     
-# async def process_command(message, player: Player):
-#     # check if message is a command
-#     if "command" in data:
-#         command = data["command"]
-#         print(f"Client received command: {command}")
-#         if command == "quit":
-#             print("Quitting...")
-#             break
 
 async def process_message(writer, message, player: Player):
     # check if message is json
