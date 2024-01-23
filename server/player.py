@@ -176,18 +176,18 @@ class Player:
         if self.village.night and self.role == "w":
             return { "msg": "not a day for werewolf" }
         
-        if village_idx < 0 or village_idx >= game.villages.__len__():
-            return { "msg": "invalid village " + str(village_idx) }
-        
-        self.village.remove_player(self)
-        self.village = game.villages[village_idx]
-        self.village.add_player(self)
+        if village_idx in game.villages:
+            self.village.remove_player(self)
+            self.village = game.villages[village_idx]
+            self.village.add_player(self)
+            return { "move": village_idx }
 
+        return { "msg": "invalid village " + str(village_idx) }
         # villager can move without acting if not previously acted
         # if self.role == "w" or self.role == "v":
         #    self.has_acted = True
 
-        return { "move": village_idx }
+        
     
     def inspect(self, game, villager_idx: int):
         if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
