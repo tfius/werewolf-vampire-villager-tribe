@@ -16,7 +16,7 @@ names = {
 
 def get_input():
     while True:
-        key = input("Enter command (a)ttack [villager] (d)efend [villager] (v)ote [villager] (m)ove [village] (c)hat (q)uit ")
+        key = input("Enter command (a)ttack [villager], (d)efend [villager], (v)ote [villager], (i)nspect [villager], w(ho) am i , (m)ove [village], (c)hat [message] (q)uit ")
         command_queue.put(key)
 
 # Start the input thread
@@ -58,7 +58,24 @@ async def process_message(writer, message, player: Player):
         if "inspect" in data:
             print("inspect: " + str(data["inspect"]))            
         if "village" in data:
-            print("village: " + str(data["village"]))
+           print("village: " + str(data["village"]))
+        if "new_village" in data:
+           print("new_village: " + str(data["new_village"]))
+        if "player" in data:
+            print("player: " + str(data["player"]))
+        if "player_damage" in data:
+            print("player_damage: " + str(data["player_damage"]))            
+        if "target_damage" in data:
+            print("target_damage: " + str(data["target_damage"]))            
+        if "eliminated" in data:
+            print("eliminated: " + str(data["eliminated"]))            
+        if "governance" in data:
+            print("governance: " + str(data["governance"]))
+            print("in village: " + str(data["village_id"]))
+            print("governance: " + str(data))
+        if "removed_village" in data:
+            print("removed_village: " + str(data["removed_village"]))
+
         if "game" in data:
             # print("got game", data["game"])
             pass 

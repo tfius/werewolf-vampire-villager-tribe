@@ -1,5 +1,13 @@
 import random 
 from village import Village
+names = {
+    "n": "Villager",
+    "w": "Werewolf",
+    "v": "Vampire",
+    "n+e": "Villager Eliminated",
+    "w+e": "Werewolf Eliminated",
+    "v+e": "Vampire Eliminated",
+}
 
 KILL_RATE = 1
 DIE_RATE = 1
@@ -14,6 +22,7 @@ class Player:
         self.has_voted = False
         self.ballots = 0
         self.defend = None
+        self.home_village = None
         # self.alive = True
    
     def state(self): 
@@ -25,7 +34,8 @@ class Player:
             "a": self.alive,
             "b": self.ballots,
         }
-        return state 
+        # return { "player" : state }
+        return state
 
     def assign_role(self, role):
         self.role = role
@@ -38,9 +48,10 @@ class Player:
         self.life = 100
         self.ballots = 0
         self.defend = None
+        self.home_village = None
         # move to random village
         self.move(game, random.randint(0, game.villages.__len__()))
-        return { "msg":"revived" }
+        return { "msg": "revived" }
     
     def defense(self, game, villager_idx: int):
         if not self.alive:
@@ -48,8 +59,11 @@ class Player:
         if self.has_acted:
             return { "msg":"already acted" }
         
+        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
+            return { "msg": "invalid villager " + str(villager_idx) }
+        
         self.defend = self.village.get_players()[villager_idx]
-        return { "msg":"defense" }
+        return { "defense": self.defend.id }
 
     def change_life(self, amount):
         if not self.alive:
@@ -68,14 +82,20 @@ class Player:
             return { "msg": "already acted" }
         
         if self.role == "v" and not self.village.night:
-            return { "msg": "not night v" }
+            return { "msg": "not night for vampire" }
         if self.role == "n" and self.village.night:
-            return { "msg": "not night n" }
+            return { "msg": "only during day" }
+        
+        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
+            return { "msg": "invalid villager " + str(villager_idx) }
+
+        player_damage = 0
+        target_damage = 0
                    
         other_player = self.village.get_players()[villager_idx]
         if(other_player == self.defend):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
             return { "msg": "defended" }
         if(other_player == self and self.role != "n"):
             return { "msg": "cannot attack self " + self.role }
@@ -83,49 +103,62 @@ class Player:
         # normals beat werewolves and vampires at day, beat normals anytime
         if(self.role == "n"):
           if(other_player.role == "n"):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(-KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = -KILL_RATE
           elif(other_player.role == "w"):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
           elif(other_player.role == "v"):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
 
         # vampires lose against werewolves and vampires, beat normals
         if(self.role == "v"):
           if(other_player.role == "w"):
-            other_player.change_life(KILL_RATE)
-            self.change_life(-KILL_RATE)
+            target_damage = KILL_RATE
+            player_damage = -KILL_RATE
           elif(other_player.role == "v"):
-            other_player.change_life(KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = KILL_RATE
+            player_damage = KILL_RATE
           elif(other_player.role == "n"):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
             
         # werewolves beat werewolves, beat vampires at day and normals at night
         if(self.role == "w"):
           if(other_player.role == "w"):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
           elif(other_player.role == "v" and not self.village.night):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
           elif(other_player.role == "n" and self.village.night):
-            other_player.change_life(-KILL_RATE)
-            self.change_life(KILL_RATE)
+            target_damage = -KILL_RATE
+            player_damage = KILL_RATE
+
+        other_player.change_life(target_damage)
+        self.change_life(player_damage)
 
         # other_player.change_life(-1)
         self.has_acted = True
-        return { "msg": "acted " + other_player.id }
+        return { "msg": "acted against " + other_player.id, 
+                 "player_damage": target_damage,
+                 "target_damage": player_damage }
 
     def vote(self, game, villager_idx: int):
         if self.has_voted:
             return { "msg":"already voted" }
         if self.village.night:
             return { "msg": "not day" }
+        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
+            return { "msg": "invalid villager " + str(villager_idx) }
+        
         other_player = self.village.get_players()[villager_idx]
+        if other_player == self:
+            return { "msg": "cannot vote for self" }
+        if other_player.alive == False:
+            return { "msg": "cannot vote for dead" }
+        
         other_player.ballots += 1
         self.has_voted = True
         return { "msg":"voted" }
@@ -138,10 +171,10 @@ class Player:
             return { "msg":"already acted n" }
         # vampires can move at night
         if not self.village.night and self.role == "v":
-            return { "msg": "not night v" }
+            return { "msg": "not night for vampire" }
         # werewolves can move at day
         if self.village.night and self.role == "w":
-            return { "msg": "not day w" }
+            return { "msg": "not a day for werewolf" }
         
         if village_idx < 0 or village_idx >= game.villages.__len__():
             return { "msg": "invalid village " + str(village_idx) }
@@ -157,6 +190,9 @@ class Player:
         return { "move": village_idx }
     
     def inspect(self, game, villager_idx: int):
+        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
+            return { "msg": "invalid villager " + str(villager_idx) }
+        
         other_player = self.village.get_players()[villager_idx]
 
         game_state = {
@@ -169,8 +205,7 @@ class Player:
         return { "inspect" : game_state }
 
     def live(self, night):
-        # Process player life logic
-        # all things must die
+        # Process player life logic, all things must die
         # warewolf loses life if they did not attack
         if self.role == "w": 
             if night:

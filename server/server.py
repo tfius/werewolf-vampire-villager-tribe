@@ -26,6 +26,23 @@ def generate_short_uuid():
     short_uuid = base64.urlsafe_b64encode(hashed_uuid)[:22]  # Trim padding
     return str(short_uuid.decode())
 
+GAME_LOG_FILE = "game_logs.txt"
+ACTION_LOG_FILE = "action_logs.txt"
+# Log data for RL Training
+def log_data(filename, data):
+    with open(filename, "a") as file:
+        file.write(json.dumps(data) + "\n")
+
+def log_game_state(game):
+    log_data(GAME_LOG_FILE, game.state())
+
+def log_player_action(player, action, result ):
+    log_data(ACTION_LOG_FILE, { "player": player.state(), "action": action, "result": result })
+
+# Broadcast condition and flag
+game_state_changed = False
+
+
 class GameServer:
     def __init__(self, host=HOST, port=PORT):
         self.host = host
@@ -47,7 +64,11 @@ class GameServer:
     async def game_loop(self):
         while True:
             # print("Updating server state")
-            self.game.update()  # Update the game state
+            actions = self.game.update()  # Update the game state
+            # broadcast messages
+            for action in actions:
+                await self.broadcast(json.dumps(action))  # Broadcast the game state
+
             game_state = self.game.state()  # Get the current state of the game
             await self.broadcast(json.dumps(game_state))  # Broadcast the game state
             await asyncio.sleep(HOUR_IN_SECONDS)  # Wait for a specified interval before the next update
@@ -59,6 +80,8 @@ class GameServer:
         self.connected_clients[writer] = {'addr': addr, 'reader': reader, 'writer': writer, "player": new_player } 
         print(f"{addr} is {new_player.state()}")
         self.players[new_player.id] = new_player
+
+        log_player_action(new_player, "join", { "result": "connected" })
 
         try:
            # reply with new_player 
@@ -89,7 +112,6 @@ class GameServer:
 
     async def send(self, writer, message):
         try:
-          # print(f"send {message}")
           writer.write(message.encode())
           await writer.drain()
         except Exception as e:
@@ -116,18 +138,26 @@ class GameServer:
                 match command:
                   case "a": # act
                     result = player.attack(self.game, int(argument))  
+                    log_player_action(player, data, result)
                   case "m": # move to village
                     result = player.move(self.game, int(argument))
+                    log_player_action(player, data, result)
                   case "d": # defend from player in village
                     result = player.defense(self.game, int(argument))
+                    log_player_action(player, data, result)
                   case "v": # vote for player in village
                     result = player.vote(self.game, int(argument))
+                    log_player_action(player, data, result)
                   case "i": # inspect village
                     result = player.inspect(self.game, int(argument))
+                  case "e": # establish village
+                    result = self.game.establish_village(player)
+                    log_player_action(player, data, result)
+
                   case "g": # get game state
                     result = player.village.state()
                   case "w": # who am i
-                    result = player.state()
+                    result = { "player": player.state() }
 
                   case "c":
                     # player.chat()
@@ -136,35 +166,35 @@ class GameServer:
                     if not player.alive:
                           self.game.assign_new_role(player)
                           result = player.revive(self.game)
+                    else: 
+                          result = { "msg": "still alive" }
                   case _: 
-                    result = "Unknown command <" + data + ">"
+                    result = { "unknown" : data  }
                 
             except ValueError:
                 print(f"Cannot convert {argument} to integer")
+                result = { "arg" : f"{argument}" }
             except Exception as e:
                 print(f"Error: {e}")
-                result = "cannot perform action " + f"Error: {e}"
+                result = { "error" : f"{e}" }
                 pass
         
-        res = json.dumps(result)
-        print(f"To {player.id} sending: {res} <- {data}")
-        await self.send(writer, res)
-        
+        game_state_changed = True
+        await self.send(writer, json.dumps(result))
+               
     async def broadcast(self, message):
-        # Create a list of coroutines
+        global game_state_changed
         tasks = [self.send(writer, message) for writer in self.connected_clients]
-        # tasks = [self.send(writer, "") for writer in self.connected_clients]
-        # Run the coroutines concurrently
-        await asyncio.gather(*tasks)
+        await asyncio.gather(*tasks)  # Run the coroutines concurrently
+        log_game_state(self.game)
+        game_state_changed = False
 
 
 async def main():
     server = GameServer()
     loop = asyncio.get_running_loop()
-
     # Schedule the game loop to run concurrently with the server
     loop.create_task(server.game_loop())
-
     # Start the server
     await server.start_server()
 

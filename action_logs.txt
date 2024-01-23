@@ -1,0 +1,243 @@
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 95, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 95, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 90, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not day w"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not day w"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not day w"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted WsS2-ggdoWmKIGxxQA63x3"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "cannot attack self w"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted WsS2-ggdoWmKIGxxQA63x3"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not day w"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "cannot attack self w"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted WsS2-ggdoWmKIGxxQA63x3"}}
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 66, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted WsS2-ggdoWmKIGxxQA63x3"}}
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 66, "r": "n", "v": 0, "a": true, "b": 1}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "clIVhVPZKmcBqAdS_AfeUM", "l": 99, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "WsS2-ggdoWmKIGxxQA63x3", "l": 0, "r": "n+e+e", "v": 0, "a": false, "b": 1}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "-gFwpzNyNi52WMUzmnSdTB", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "CyVRfTuyVT8ks3iF6Mh84C", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "CyVRfTuyVT8ks3iF6Mh84C", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted against -gFwpzNyNi52WMUzmnSdTB", "player": -1, "target": 1}}
+{"player": {"i": "CyVRfTuyVT8ks3iF6Mh84C", "l": 99, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "CyVRfTuyVT8ks3iF6Mh84C", "l": 99, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "e2wh2ij3PgUFxgmS6gP9at", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "ozVDk9alOFiPrRUz7GDUB9", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "ozVDk9alOFiPrRUz7GDUB9", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted against e2wh2ij3PgUFxgmS6gP9at", "player": -1, "target": 1}}
+{"player": {"i": "e2wh2ij3PgUFxgmS6gP9at", "l": 99, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "cannot attack self v"}}
+{"player": {"i": "e2wh2ij3PgUFxgmS6gP9at", "l": 98, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "acted against ozVDk9alOFiPrRUz7GDUB9", "player": 1, "target": -1}}
+{"player": {"i": "31OgYCoZRzghH9sjAM_PZm", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "eCAgkjcfk4mQ_EzZMKwTh7", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "31OgYCoZRzghH9sjAM_PZm", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "cannot attack self w"}}
+{"player": {"i": "31OgYCoZRzghH9sjAM_PZm", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "acted against eCAgkjcfk4mQ_EzZMKwTh7", "player": -1, "target": 1}}
+{"player": {"i": "-Zg-t7TuTOYfy6YSJo11RG", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "0_stf8DATVIKHUTpLJlOZ9", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "-Zg-t7TuTOYfy6YSJo11RG", "l": 98, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "only during day"}}
+{"player": {"i": "-Zg-t7TuTOYfy6YSJo11RG", "l": 97, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "only during day"}}
+{"player": {"i": "0_stf8DATVIKHUTpLJlOZ9", "l": 97, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "only during day"}}
+{"player": {"i": "0_stf8DATVIKHUTpLJlOZ9", "l": 96, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "only during day"}}
+{"player": {"i": "0_stf8DATVIKHUTpLJlOZ9", "l": 95, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "only during day"}}
+{"player": {"i": "0_stf8DATVIKHUTpLJlOZ9", "l": 94, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted against -Zg-t7TuTOYfy6YSJo11RG", "player_damage": -1, "target_damage": -1}}
+{"player": {"i": "lZisD_JOopxRg-4GSAYV09", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "lZisD_JOopxRg-4GSAYV09", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "cannot attack self w"}}
+{"player": {"i": "7ZbSlIXrv9l9rR_ZgmSvOV", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "7ZbSlIXrv9l9rR_ZgmSvOV", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "acted against 9k9ISSuig_LUwAo9XxgOsT", "player_damage": -1, "target_damage": 1}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 99, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 98, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "acted against 7ZbSlIXrv9l9rR_ZgmSvOV", "player_damage": 1, "target_damage": -1}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 97, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 97, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 97, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 97, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "9k9ISSuig_LUwAo9XxgOsT", "l": 97, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for dead"}}
+{"player": {"i": "7Iwedzz6O5Q4YpJusSjpgW", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "mdwDA0gyAK_g_ksGzJczkF", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "7Iwedzz6O5Q4YpJusSjpgW", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "7Iwedzz6O5Q4YpJusSjpgW", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "not day"}}
+{"player": {"i": "7Iwedzz6O5Q4YpJusSjpgW", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "not day"}}
+{"player": {"i": "7Iwedzz6O5Q4YpJusSjpgW", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "voted"}}
+{"player": {"i": "7Iwedzz6O5Q4YpJusSjpgW", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "already voted"}}
+{"player": {"i": "op90ylBbLjCT2bUBvSNIwk", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "OxBJGtPPgom4RpvX8JTCU_", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "kXIT5ZOldpjnjo-CPp6c5K", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "sg-O0uae6_kE3fLus7N39r", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "WwkZXF7BUhVDJCsnfX27j8", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "hTN_XYzLlOXwJwxy1zCrXL", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "z_j9kf95lB1IXoIxxp8QlQ", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "pzwFDo6-ErPceV4isdlR42", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "pzwFDo6-ErPceV4isdlR42", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "only during day"}}
+{"player": {"i": "pzwFDo6-ErPceV4isdlR42", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "pzwFDo6-ErPceV4isdlR42", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "pzwFDo6-ErPceV4isdlR42", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "already voted"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "invalid villager 1"}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "7EJpjwyvsd7hUIre9zTaJ9", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "XUcunaWi5yMZGziMoCkXgR", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "Az4nVbsKgz8oGfKRoUqUum", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "Az4nVbsKgz8oGfKRoUqUum", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "65MX6JjXecQjd5Gn24Tisj", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "t3N1FxvgTPHKpYejiH8984", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "65MX6JjXecQjd5Gn24Tisj", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "65MX6JjXecQjd5Gn24Tisj", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "not day"}}
+{"player": {"i": "65MX6JjXecQjd5Gn24Tisj", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "voted"}}
+{"player": {"i": "65MX6JjXecQjd5Gn24Tisj", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "already voted"}}
+{"player": {"i": "RA1wGQQ_YHTE_lXWWHcUZK", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "Yv4c8VrNJIuU4LtclNCkjF", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "RA1wGQQ_YHTE_lXWWHcUZK", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "voted"}}
+{"player": {"i": "NZShx13njItJOD4E_fQliI", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "9rZwP6xMSyDr7HrTrX9kqF", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "not day"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "invalid villager 1"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "invalid villager 1"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "not day"}}
+{"player": {"i": "2SUIQFs2r4JCZOt-hTL-tH", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "jhZcH52tF8NMLM0A4Y2flz", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "jhZcH52tF8NMLM0A4Y2flz", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 9"}, "result": {"msg": "invalid village 9"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "y85ObCtn39ZeNlDpWBrQuG", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "jhZcH52tF8NMLM0A4Y2flz", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "VEnkbvDP7v6wSgtJnb3wQt", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "lFE4JLYluu1rFWAi-eZ0GN", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "lFE4JLYluu1rFWAi-eZ0GN", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "invalid village 1"}}
+{"player": {"i": "lFE4JLYluu1rFWAi-eZ0GN", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "lFE4JLYluu1rFWAi-eZ0GN", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "lFE4JLYluu1rFWAi-eZ0GN", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "voted"}}
+{"player": {"i": "gGCHWWnpm5HOcepy-7bxvm", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "R0MkeXCVd-H4fsIypi2p5I", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "tLj98XrhxLWXYMEKvsHavs", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "tcfPgR5cEB5epyOmsU08N-", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "IQTqJkWabtQ7cnnop_Iq1A", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "O8mRPzwWpvbYaTQsKjxkNc", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "O8mRPzwWpvbYaTQsKjxkNc", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "failed to establish village"}}
+{"player": {"i": "O8mRPzwWpvbYaTQsKjxkNc", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "e "}, "result": {"msg": "failed to establish village"}}
+{"player": {"i": "q5xBi1OhUoAo8C5eZOFEKL", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "q5xBi1OhUoAo8C5eZOFEKL", "l": 100, "r": "v", "v": 2, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "established village"}}
+{"player": {"i": "q5xBi1OhUoAo8C5eZOFEKL", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "established village"}}
+{"player": {"i": "q5xBi1OhUoAo8C5eZOFEKL", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "q5xBi1OhUoAo8C5eZOFEKL", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "q5xBi1OhUoAo8C5eZOFEKL", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "e 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "established village"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 5, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "established village"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 5, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "OuaUubkF8ucxHZs5kiEafx", "l": 100, "r": "w", "v": 2, "a": true, "b": 0}, "action": {"c": "m 2"}, "result": {"move": 2}}
+{"player": {"i": "iPUSLiPUxBjbf8HAE0frsL", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "iPUSLiPUxBjbf8HAE0frsL", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "iPUSLiPUxBjbf8HAE0frsL", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "lFm1GZ_Yehxc3Kly2WTmCh", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 3"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "J8jxWhn0EOG4IxSfGSxPdp", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "invalid village 1"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 3, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 6, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 8, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "_i1Tc_ejl3xLsiHJpfh33l", "l": 100, "r": "v", "v": 8, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 2, "a": true, "b": 0}, "action": {"c": "m 2"}, "result": {"move": 2}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 3, "a": true, "b": 0}, "action": {"c": "m 3"}, "result": {"move": 3}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 4, "a": true, "b": 0}, "action": {"c": "m 4"}, "result": {"move": 4}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 5, "a": true, "b": 0}, "action": {"c": "m 5"}, "result": {"move": 5}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 6, "a": true, "b": 0}, "action": {"c": "m 6"}, "result": {"move": 6}}
+{"player": {"i": "PNWV18RReuRBkQxbtuGHh_", "l": 100, "r": "n", "v": 7, "a": true, "b": 0}, "action": {"c": "m 7"}, "result": {"move": 7}}
+{"player": {"i": "aMHIIij5vOSSj1Qy86L3Ty", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "FL3W6Q86RpQIkNoU6WGsFk", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "FL3W6Q86RpQIkNoU6WGsFk", "l": 100, "r": "w", "v": 2, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "FL3W6Q86RpQIkNoU6WGsFk", "l": 100, "r": "w", "v": 2, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "FL3W6Q86RpQIkNoU6WGsFk", "l": 100, "r": "w", "v": 7, "a": true, "b": 0}, "action": {"c": "e "}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "aq45xdOgKEGu9g0qNvtoez", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "aq45xdOgKEGu9g0qNvtoez", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "aq45xdOgKEGu9g0qNvtoez", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "aq45xdOgKEGu9g0qNvtoez", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "aq45xdOgKEGu9g0qNvtoez", "l": 100, "r": "v", "v": 5, "a": true, "b": 0}, "action": {"c": "e"}, "result": [{"new_village": {"village": {"i": 5, "t": 0, "n": false, "g": null, "p": [{"i": "aq45xdOgKEGu9g0qNvtoez", "l": 100, "r": "v", "v": 5, "a": true, "b": 0}], "e": "aq45xdOgKEGu9g0qNvtoez"}}}, {"move": 5}]}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"new_village": {"village": {"i": 3, "t": 0, "n": false, "g": null, "p": [{"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}], "e": "6T1jIpDhhNOxe0voJpBsUi"}}}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "already established village"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "already established village"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "already established village"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "cannot attack self v"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 1"}, "result": {"msg": "invalid villager 1"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "a 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "already established village"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 2"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 3"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 3"}, "result": {"msg": "invalid village 3"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 2, "a": true, "b": 0}, "action": {"c": "m 2"}, "result": {"move": 2}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 2, "a": true, "b": 0}, "action": {"c": "m 9"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 2, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "6T1jIpDhhNOxe0voJpBsUi", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "jzcy99czq827xvXEoibGEy", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "xdNohXJz4MpP7PjSMWO6I-", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "jzcy99czq827xvXEoibGEy", "l": 100, "r": "w", "v": 2, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"new_village": {"village": {"i": 2, "t": 0, "n": false, "g": null, "p": [{"i": "jzcy99czq827xvXEoibGEy", "l": 100, "r": "w", "v": 2, "a": true, "b": 0}], "e": "jzcy99czq827xvXEoibGEy", "d": 0}}}}
+{"player": {"i": "xdNohXJz4MpP7PjSMWO6I-", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "m 3"}, "result": {"msg": "invalid village 3"}}
+{"player": {"i": "xdNohXJz4MpP7PjSMWO6I-", "l": 100, "r": "n", "v": 2, "a": true, "b": 0}, "action": {"c": "m 2"}, "result": {"move": 2}}
+{"player": {"i": "jzcy99czq827xvXEoibGEy", "l": 100, "r": "w", "v": 2, "a": true, "b": 0}, "action": {"c": "v 1"}, "result": {"msg": "voted"}}
+{"player": {"i": "xdNohXJz4MpP7PjSMWO6I-", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "xdNohXJz4MpP7PjSMWO6I-", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "jzcy99czq827xvXEoibGEy", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": {"c": "m 1"}, "result": {"move": 1}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"new_village": {"village": {"i": 3, "t": 0, "n": false, "g": null, "p": [{"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}], "e": "G4G3uzctCK_X1j4sogxpoy", "d": 0}}}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "e"}, "result": {"msg": "already established village"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
