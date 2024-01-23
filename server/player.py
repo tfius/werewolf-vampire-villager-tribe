@@ -163,9 +163,10 @@ class Player:
             "v": other_player.village.id,
             "t": other_player.village.time,
             "n": other_player.village.night,
-            "p": [ player.state() for player in other_player.village.players]
+            "p": other_player.state()
+            # "p": [ player.state() for player in other_player.village.players]
         }
-        return { "players" : game_state }
+        return { "inspect" : game_state }
 
     def live(self, night):
         # Process player life logic

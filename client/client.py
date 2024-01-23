@@ -70,10 +70,10 @@ async def process_message(writer, message, player: Player):
         # see if data is in form of { "msg": "message"}
         if "msg" in data:
             print(data["msg"])
-        if "players" in data:
-            print("got players " + str(data["players"]))            
+        if "inspect" in data:
+            print("inspect: " + str(data["inspect"]))            
         if "village" in data:
-            print("got village " + str(data["village"]))
+            print("village: " + str(data["village"]))
         if "game" in data:
             # print("got game", data["game"])
             pass 
