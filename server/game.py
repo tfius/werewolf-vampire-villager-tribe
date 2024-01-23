@@ -13,6 +13,14 @@ class Game:
         self.villages.append(Village(self.villages.__len__()))
         print(f"Added new village: {self.villages.__len__()}")
 
+    def remove_player(self, player):
+        # self.players.remove(player)
+        player.village.remove_player(player)
+        if player.village.players.__len__() == 0:
+            self.villages.remove(player.village)
+            print(f"Removed village: {player.village.id}")
+        print(f"Removed player: {player.id}")
+
     def assign_new_role(self, player):
         # random normal (n) or werewolf (w) or vampire (v)
         player.role = random.choice(["n", "w", "v"])
@@ -27,6 +35,8 @@ class Game:
 
     def add_player(self, player):
         self.players.append(player)
+        if(self.villages.__len__() == 0):
+           self.add_village()
         if(self.villages[-1].players.__len__() >= 10):
            self.add_village()
            
@@ -47,10 +57,10 @@ class Game:
         for village in self.villages:
             village.update()
 
-    def get_state(self):
+    def state(self):
         # Return the current state of the game
         game_state = {
             "v": [{village.id: village.time, "night": village.night} for village in self.villages],
             "p": [ player.state() for player in self.players]
         }
-        return game_state
+        return { "game": game_state }

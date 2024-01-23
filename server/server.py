@@ -13,7 +13,7 @@ from player import Player  # Assuming these are defined
 # to be read from environment variables
 PORT = 65432
 HOST = '127.0.0.1'
-HOUR_IN_SECONDS = 0.0001
+HOUR_IN_SECONDS = 0.1
 def generate_short_uuid():
     # Generate a UUID
     uuid_str = str(uuid.uuid4())
@@ -52,7 +52,7 @@ class GameServer:
         while True:
             # print("Updating server state")
             self.game.update()  # Update the game state
-            game_state = self.game.get_state()  # Get the current state of the game
+            game_state = self.game.state()  # Get the current state of the game
             await self.broadcast(json.dumps(game_state))  # Broadcast the game state
             await asyncio.sleep(HOUR_IN_SECONDS)  # Wait for a specified interval before the next update
 
@@ -85,18 +85,24 @@ class GameServer:
             print(f"Error: {e}")
         finally:
             print(f"Closing the connection from {addr}")
+            # remove player from game
+            self.game.remove_player(new_player)
             del self.connected_clients[writer]
             writer.close()
             await writer.wait_closed()
 
     async def send(self, writer, message):
-        # print(f"send {message}")
-        writer.write(message.encode())
-        await writer.drain()
+        try:
+          # print(f"send {message}")
+          writer.write(message.encode())
+          await writer.drain()
+        except Exception as e:
+          print(f"Error: {e}")
+          pass
 
     async def process(self, writer, player, message):
         data = json.loads(message) 
-        result = "unknown command"
+        result = { "result": "unknown command" }
         print(f"{player.id} process {data}") # Process the message and update game state
         if "c" in data:
             incoming = data["c"] 
@@ -121,7 +127,11 @@ class GameServer:
                   case "v": # vote for player in village
                     result = player.vote(self.game, int(argument))
                   case "i": # inspect village
-                    result = player.inspect(self.game, int(argument))  
+                    result = player.inspect(self.game, int(argument))
+                  case "g": # get game state
+                    result = player.village.state()
+                  case "w": # who am i
+                    result = player.state()
 
                   case "c":
                     # player.chat()
@@ -131,7 +141,7 @@ class GameServer:
                           self.game.assign_new_role(player)
                           result = player.revive(self.game)
                   case _: 
-                    result = "Unknown command"
+                    result = "Unknown command <" + data + ">"
                 
             except ValueError:
                 print(f"Cannot convert {argument} to integer")
@@ -139,13 +149,15 @@ class GameServer:
                 print(f"Error: {e}")
                 result = "cannot perform action " + f"Error: {e}"
                 pass
-
-        print(f"{player.id} {data} result {result}")
-        await self.send(writer, json.dumps({"message": result}))
+        
+        res = json.dumps(result)
+        print(f"To {player.id} sending: {res} <- {data}")
+        await self.send(writer, res)
         
     async def broadcast(self, message):
         # Create a list of coroutines
         tasks = [self.send(writer, message) for writer in self.connected_clients]
+        # tasks = [self.send(writer, "") for writer in self.connected_clients]
         # Run the coroutines concurrently
         await asyncio.gather(*tasks)
 

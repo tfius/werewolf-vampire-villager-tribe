@@ -9,6 +9,9 @@ names = {
     "n": "Villager",
     "w": "Werewolf",
     "v": "Vampire",
+    "n+e": "Villager Eliminated",
+    "w+e": "Werewolf Eliminated",
+    "v+e": "Vampire Eliminated",
 }
 
 # def print_at_position(text, x=0, y=0):
@@ -36,7 +39,7 @@ class Player:
         self.alive = False
         self.ballots = 0
 
-    def get_state(self): 
+    def state(self): 
         state = {
             "i": self.id,
             "r": self.role,
@@ -46,63 +49,83 @@ class Player:
             "b": self.ballots,
         } 
         return state
+    
+# async def process_command(message, player: Player):
+#     # check if message is a command
+#     if "command" in data:
+#         command = data["command"]
+#         print(f"Client received command: {command}")
+#         if command == "quit":
+#             print("Quitting...")
+#             break
+
+async def process_message(writer, message, player: Player):
+    # check if message is json
+    try:
+        data = json.loads(message)
+        # print(f"Client received: {data}")
+        if "move" in data:
+            print(f"Moved to {data['move']}")
+            # player.village = data["move"]
+        # see if data is in form of { "msg": "message"}
+        if "msg" in data:
+            print(data["msg"])
+        if "players" in data:
+            print("got players " + str(data["players"]))            
+        if "village" in data:
+            print("got village " + str(data["village"]))
+        if "game" in data:
+            # print("got game", data["game"])
+            pass 
+        if "message" in data:
+            print("message", data["message"])
+        if "new_player" in data: # new player info
+            new_player = data["new_player"]
+            player.id = new_player["i"] # id
+            player.role = new_player["r"] # role
+            player.life = new_player["l"] # life
+            player.village = new_player["v"] # village
+            player.alive = new_player["a"] # alive
+            player.ballots = new_player["b"] # ballots
+
+            print(f"{names[player.role]} '{player.id}' {player.life} points in village:{player.village}")
+            await send_message(writer, json.dumps(player.state()))
+
+        if "v" in data: # villages
+            # print(f"Villages: {data['v']}")
+            pass
+
+        if "p" in data: # players
+            # find myplayer in players 
+            myplayer = [p for p in data['p'] if p['i'] == player.id][0]
+
+            # if life is different update myplayer
+            if myplayer["l"] != player.life:
+               player.life = myplayer["l"]
+               print(f"My {names[player.role]} life is {player.life}")
+               if myplayer["a"] != player.alive:
+                  player.alive = myplayer["a"]
+                  print(f"State of {names[player.role]} is {player.alive} (R)evive ? ")
+    except ValueError:
+        print(f"Cannot convert '{message}' to json")
 
 async def listen_for_messages(reader, writer, player: Player):
     while True:
-        data = await reader.read(4096)
-        if data:
-            message = data.decode()
-            # print(f"Client received: {message}")
-            # check if message is json
-            try:
-                data = json.loads(message)
-                if "message" in data:
-                    print(data["message"])
-                if "new_player" in data: # new player info
-                   new_player = data["new_player"]
-                   player.id = new_player["i"] # id
-                   player.role = new_player["r"] # role
-                   player.life = new_player["l"] # life
-                   player.village = new_player["v"] # village
-                   player.alive = new_player["a"] # alive
-                   player.ballots = new_player["b"] # ballots
+        try:
+          data = await reader.read(4096)
+          if data:
+            messages = data.decode().split('\n')  # assuming '\n' is the delimiter
 
-                   print(f"I'm '{player.id}' in village {player.village} with role {player.role} and life {player.life}")
-                   await send_message(writer, json.dumps(player.get_state()))
+          for message in messages:
+            await process_message(writer, message, player) # Process received message (update game state, player role, etc.)
 
-                if "v" in data: # villages
-                    # print(f"Villages: {data['v']}")
-                    pass
-
-                if "p" in data: # players
-                    # find myplayer in players 
-                    myplayer = [p for p in data['p'] if p['i'] == player.id][0]
-
-                    # if life is different update myplayer
-                    if myplayer["l"] != player.life:
-                       player.life = myplayer["l"]
-                       print(f"My {names[player.role]} life is {player.life}")
-                       if myplayer["a"] != player.alive:
-                          player.alive = myplayer["a"]
-                          print(f"State of {names[player.role]} is {player.alive} (R)evive ? ")
-
-                # check if message is a command
-                if "command" in data:
-                    command = data["command"]
-                    print(f"Client received command: {command}")
-                    if command == "quit":
-                        print("Quitting...")
-                        break
-            except Exception as e:
-                print(f"Error: {e}")
-                pass
-
-
-            # Process received message (update game state, player role, etc.)
-        else:
-            print("Server connection closed.")
-            break
-
+        except ConnectionResetError:
+          print("Connection lost, trying to reconnect...")
+          break
+        except Exception as e:
+          print(f"Client Listen Error: {e} {message}")
+          pass
+            
         if not command_queue.empty():
             command = command_queue.get()
             print(f"c: {command}")

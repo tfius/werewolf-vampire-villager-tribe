@@ -16,6 +16,17 @@ class Village:
     def get_players(self):
         return self.players
     
+    def state(self):
+        # Return the current state of the village
+        village_state = {
+            "i": self.id,
+            "t": self.time,
+            "n": self.night,
+            "g": self.governance,
+            "p": [ player.state() for player in self.players]
+        }
+        return { "village": village_state }
+    
     # see who is winning in the village
     def governance(self):
         # count warewolves
@@ -46,7 +57,7 @@ class Village:
             for player in self.players:
                 player.live(self.night)
 
-            if not self.night: # if day starts sort players by ballots
+            if not self.night and self.players.__len__()>0: # if day starts sort players by ballots
                 # get players in village sorted by ballots
                 sorted_players = sorted(self.players, key=lambda x: x.ballots, reverse=True)
                 # self.players.sort(key=lambda x: x.ballots, reverse=True)
@@ -54,7 +65,7 @@ class Village:
                 # kill player with most ballots
                 if sorted_players[0].ballots > 0:
                    sorted_players[0].change_life(-100)
-                   sorted_players[0].role = "e" # eliminated
+                   sorted_players[0].role = sorted_players[0].role+"+e" # w|v|n eliminated
                 # reset ballots
                 for player in self.players:
                     player.ballots = 0
