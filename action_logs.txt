@@ -241,3 +241,15 @@
 {"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
 {"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 3, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
 {"player": {"i": "G4G3uzctCK_X1j4sogxpoy", "l": 100, "r": "v", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "YxpWc6SRYItsp0yoPTJUjG", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "K_1rYrCAYJbBc0bQWeU2lJ", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "K_1rYrCAYJbBc0bQWeU2lJ", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "3qxzSueDpE5FP8tTeJ54p_", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "yCuQ6QtX6tYF5R-G9nryHl", "l": 100, "r": "v", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "IaukSmFWx6IoTLe_1C3Udf", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "V7uO3ic1fQs8BqGIJbRgPI", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "V7uO3ic1fQs8BqGIJbRgPI", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "not day"}}
+{"player": {"i": "V7uO3ic1fQs8BqGIJbRgPI", "l": 100, "r": "n", "v": 1, "a": true, "b": 0}, "action": {"c": "v 0"}, "result": {"msg": "invalid villager 0"}}
+{"player": {"i": "geZc3C8tUwRVzEduIyNR45", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "geZc3C8tUwRVzEduIyNR45", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "V7uO3ic1fQs8BqGIJbRgPI", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}

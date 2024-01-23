@@ -40,6 +40,16 @@ class Player:
     def assign_role(self, role):
         self.role = role
 
+    def change_life(self, amount):
+        if not self.alive:
+            return
+        self.life += amount; 
+        if(self.life <= 0):
+            self.life = 0
+            self.alive = False 
+        if(self.life > 100):
+            self.life = 100
+
     def assign_village(self, village):
         self.village = village
 
@@ -50,32 +60,23 @@ class Player:
         self.defend = None
         self.home_village = None
         # move to random village
-        self.move(game, random.randint(0, game.villages.__len__()))
+        villages_list = list(game.villages.keys())
+        self.move(game, random.choice(villages_keys))
         return { "msg": "revived" }
     
-    def defense(self, game, villager_idx: int):
+    def defense(self, game, villager_key):
         if not self.alive:
             return { "msg":"already voted" }
         if self.has_acted:
             return { "msg":"already acted" }
         
-        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
-            return { "msg": "invalid villager " + str(villager_idx) }
+        if villager_key not in self.village.players:
+            return { "msg": "invalid villager " + villager_key }
         
-        self.defend = self.village.get_players()[villager_idx]
+        self.defend = self.village.players[villager_key]
         return { "defense": self.defend.id }
-
-    def change_life(self, amount):
-        if not self.alive:
-            return
-        self.life += amount; 
-        if(self.life <= 0):
-            self.life = 0
-            self.alive = False 
-        if(self.life > 100):
-            self.life = 100
-    
-    def attack(self, game, villager_idx: int):
+   
+    def attack(self, game, villager_key):
         if not self.alive:
             return { "msg": "dead" }
         if self.has_acted:
@@ -86,13 +87,13 @@ class Player:
         if self.role == "n" and self.village.night:
             return { "msg": "only during day" }
         
-        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
-            return { "msg": "invalid villager " + str(villager_idx) }
+        if villager_key not in self.village.players:
+            return { "msg": "invalid villager " + villager_key }
 
         player_damage = 0
         target_damage = 0
                    
-        other_player = self.village.get_players()[villager_idx]
+        other_player = self.village.players[villager_key]
         if(other_player == self.defend):
             target_damage = -KILL_RATE
             player_damage = KILL_RATE
@@ -145,15 +146,15 @@ class Player:
                  "player_damage": target_damage,
                  "target_damage": player_damage }
 
-    def vote(self, game, villager_idx: int):
+    def vote(self, game, villager_key):
         if self.has_voted:
             return { "msg":"already voted" }
         if self.village.night:
             return { "msg": "not day" }
-        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
-            return { "msg": "invalid villager " + str(villager_idx) }
+        if villager_key not in self.village.players:
+            return { "msg": "invalid villager " + villager_key }
         
-        other_player = self.village.get_players()[villager_idx]
+        other_player = self.village.players[villager_key]
         if other_player == self:
             return { "msg": "cannot vote for self" }
         if other_player.alive == False:
@@ -163,7 +164,7 @@ class Player:
         self.has_voted = True
         return { "msg":"voted" }
 
-    def move(self, game, village_idx: int):
+    def move(self, game, village_key):
         if not self.alive:
             return { "msg": "dead" }
         # villager cant move if acted 
@@ -176,24 +177,22 @@ class Player:
         if self.village.night and self.role == "w":
             return { "msg": "not a day for werewolf" }
         
-        if village_idx in game.villages:
+        if village_key in game.villages:
             self.village.remove_player(self)
-            self.village = game.villages[village_idx]
+            self.village = game.villages[village_key]
             self.village.add_player(self)
-            return { "move": village_idx }
+            return { "move": village_key }
 
-        return { "msg": "invalid village " + str(village_idx) }
+        return { "msg": "invalid village " + str(village_key) }
         # villager can move without acting if not previously acted
         # if self.role == "w" or self.role == "v":
-        #    self.has_acted = True
-
-        
+        #    self.has_acted = True       
     
-    def inspect(self, game, villager_idx: int):
-        if villager_idx < 0 or villager_idx >= self.village.get_players().__len__():
-            return { "msg": "invalid villager " + str(villager_idx) }
+    def inspect(self, game, villager_key):
+        if villager_key not in self.village.players:
+            return { "msg": "invalid villager " + villager_key }
         
-        other_player = self.village.get_players()[villager_idx]
+        other_player = self.village.players[villager_key]
 
         game_state = {
             "v": other_player.village.id,

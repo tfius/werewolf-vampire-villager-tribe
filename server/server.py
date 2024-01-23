@@ -137,19 +137,19 @@ class GameServer:
             try:
                 match command:
                   case "a": # act
-                    result = player.attack(self.game, int(argument))  
+                    result = player.attack(self.game, argument)  
                     log_player_action(player, data, result)
                   case "m": # move to village
-                    result = player.move(self.game, int(argument))
+                    result = player.move(self.game, argument)
                     log_player_action(player, data, result)
                   case "d": # defend from player in village
-                    result = player.defense(self.game, int(argument))
+                    result = player.defense(self.game, argument)
                     log_player_action(player, data, result)
                   case "v": # vote for player in village
-                    result = player.vote(self.game, int(argument))
+                    result = player.vote(self.game, argument)
                     log_player_action(player, data, result)
                   case "i": # inspect village
-                    result = player.inspect(self.game, int(argument))
+                    result = player.inspect(self.game, argument)
                   case "e": # establish village
                     result = self.game.establish_village(player)
                     log_player_action(player, data, result)

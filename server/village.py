@@ -1,7 +1,7 @@
 class Village:
     def __init__(self, village_id):
         self.id = village_id
-        self.players = []
+        self.players = {}
         self.time = 0 # time goes from 0 to 24
         self.night = False  # Tracks whether it's day or night
         self.governance = None  # Tracks the current governance
@@ -22,11 +22,12 @@ class Village:
         return { "village": village_state }
 
     def add_player(self, player):
-        self.players.append(player)
+        self.players[player.id] = player
         player.assign_village(self)
 
     def remove_player(self, player):
-        self.players.remove(player)
+        del self.players[player.id]
+        #self.players.remove(player)
 
     def get_players(self):
         return self.players
@@ -37,17 +38,26 @@ class Village:
         if self.players.__len__() == 0:
             governance = "n"
         # count warewolves
-        warewolves = [p for p in self.players if p.role == "w"]
-        vampires = [p for p in self.players if p.role == "v"]
-        villagers = [p for p in self.players if p.role == "n"]
+        warewolves = 0
+        vampires = 0
+        villagers = 0
+        # iterate and count player roles 
+        for player in self.players.values():
+            if player.role == "w":
+                warewolves += 1
+            if player.role == "v":
+                vampires += 1
+            if player.role == "n":
+                villagers += 1
+
         # if more werewolves then villagers and vampires
-        if warewolves.__len__() >= villagers.__len__() + vampires.__len__():
+        if warewolves >= villagers + vampires:
             governance = "w"; #"werewolves lead"
         # if more vampires then villagers and werewolves
-        if vampires.__len__() >= villagers.__len__(): # + warewolves.__len__():
+        if vampires  >= villagers + warewolves: 
             governance = "v" # "vampires lead"
         # if more villagers then vampires and werewolves
-        if villagers.__len__() >= vampires.__len__() + warewolves.__len__():
+        if villagers >= vampires + warewolves:
             governance = "n" # "villagers lead"
 
         if governance != self.governance:
@@ -78,9 +88,9 @@ class Village:
             # for player in self.players:
             #     action = player.live(self.night)
 
-            if not self.night and self.players.__len__()>0: # if day starts sort players by ballots
+            if not self.night and self.players.values().__len__()>0: # if day starts sort players by ballots
                 # get players in village sorted by ballots
-                sorted_players = sorted(self.players, key=lambda x: x.ballots, reverse=True)
+                sorted_players = sorted(self.players.values(), key=lambda x: x.ballots, reverse=True)
                 # remove player with role that has +e 
                 sorted_players = [p for p in sorted_players if not p.role.endswith("+e")]
                 # self.players.sort(key=lambda x: x.ballots, reverse=True)
@@ -91,7 +101,7 @@ class Village:
                    sorted_players[0].role = sorted_players[0].role+"+e" # w|v|n eliminated
                    actions.append( { "eliminated": sorted_players[0].id } )
                 # reset ballots
-                for player in self.players:
+                for player in self.players.values():
                     player.ballots = 0
 
         if actions.__len__() > 0:
