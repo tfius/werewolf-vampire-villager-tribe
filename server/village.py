@@ -15,7 +15,7 @@ class Village:
             "t": self.time,
             "n": self.night,
             "g": self.governance,
-            "p": [ player.state() for player in self.players],
+            "p": [ player.state() for player in self.players.values()],
             "e": self.established_by.id if self.established_by != None else "",
             "d": self.days_without_people
         }
@@ -91,15 +91,16 @@ class Village:
             if not self.night and self.players.values().__len__()>0: # if day starts sort players by ballots
                 # get players in village sorted by ballots
                 sorted_players = sorted(self.players.values(), key=lambda x: x.ballots, reverse=True)
-                # remove player with role that has +e 
-                sorted_players = [p for p in sorted_players if not p.role.endswith("+e")]
+                # remove player that are eliminated                
+                sorted_players = [p for p in sorted_players if p.eliminated == False]
                 # self.players.sort(key=lambda x: x.ballots, reverse=True)
                 # print(f"Village {self.id} sorted players by ballots: {self.players}")
                 # kill player with most ballots
-                if sorted_players[0].ballots > 0:
+                if sorted_players.__len__() > 0 and sorted_players[0].ballots > 0:
                    sorted_players[0].change_life(-100)
-                   sorted_players[0].role = sorted_players[0].role+"+e" # w|v|n eliminated
+                   sorted_players[0].eliminated = True
                    actions.append( { "eliminated": sorted_players[0].id } )
+                   
                 # reset ballots
                 for player in self.players.values():
                     player.ballots = 0

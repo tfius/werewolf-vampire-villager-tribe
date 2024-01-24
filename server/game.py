@@ -15,30 +15,32 @@ class Game:
         game_state = {
             #"v": [ {village.id: village.time, "night": village.night} for village in self.villages],
             #"v": [ village.state() for village in self.villages.values()],
-            "v": [ {village.id: village.time, "night": village.night} for village in self.villages.values()],
+            "v": [ {"vkey": village.id, "t": village.time, "night": village.night, "g": village.governance} for village in self.villages.values()],
             "p": [ player.state() for player in self.players]
         }
         return { "game": game_state }
 
     def add_village(self):
-        self.villages[self.village_id] = Village(self.village_id) # add a new village 
+        self.villages[str(self.village_id)] = Village(str(self.village_id)) # add a new village 
         self.village_id += 1
         print(f"Added new village: {self.village_id-1}")
         return self.village_id-1
 
     def remove_player(self, player):
         player.village.remove_player(player)
+        # remove player from player
+        del self.players[player.id]
         print(f"Removed player: {player.id}")
 
     def assign_new_role(self, player):
         # random normal (n) or werewolf (w) or vampire (v)
-        player.role = random.choice(["n", "w", "v"])
+        player.random_role()
         # check if there are more then 2 werewolves
-        werewolves = [p for p in self.players if p.role == "w"]
+        werewolves = [p for p in player.village.players.values() if p.role == "w"]
         if werewolves.__len__() > 2:
             player.role = "n"
         # check if there is more then 1 vampire
-        vampires = [p for p in self.players if p.role == "v"]
+        vampires = [p for p in player.village.players.values() if p.role == "v"]
         if vampires.__len__() > 1:
             player.role = "n"
 

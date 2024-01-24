@@ -148,7 +148,7 @@ class GameServer:
                   case "v": # vote for player in village
                     result = player.vote(self.game, argument)
                     log_player_action(player, data, result)
-                  case "i": # inspect village
+                  case "i": # inspect villager
                     result = player.inspect(self.game, argument)
                   case "e": # establish village
                     result = self.game.establish_village(player)
@@ -164,8 +164,8 @@ class GameServer:
                     pass    
                   case "r":
                     if not player.alive:
-                          self.game.assign_new_role(player)
                           result = player.revive(self.game)
+                          self.game.assign_new_role(player)
                     else: 
                           result = { "msg": "still alive" }
                   case _: 

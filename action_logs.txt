@@ -253,3 +253,148 @@
 {"player": {"i": "geZc3C8tUwRVzEduIyNR45", "l": 100, "r": "w", "v": 1, "a": true, "b": 0}, "action": "join", "result": {"result": "connected"}}
 {"player": {"i": "geZc3C8tUwRVzEduIyNR45", "l": 100, "r": "w", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
 {"player": {"i": "V7uO3ic1fQs8BqGIJbRgPI", "l": 100, "r": "n", "v": 0, "a": true, "b": 0}, "action": {"c": "m 0"}, "result": {"move": 0}}
+{"player": {"i": "JVQE4n68Jh4I89Z-RYx88X", "l": 100, "r": "v", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "abk82Sg27HW1cJY0iJX8iu", "l": 100, "r": "s", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "jtkochYxU5tRHs4hCs5mbM", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "VX_DqExpuM3-uZbH3m-LPE", "l": 100, "r": "w", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "J1nkX980oYAMUqidTZSGmd", "l": 100, "r": "g", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "OSk-McTGJsCwUmj_sC91-1", "l": 100, "r": "n", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "66H-TnDrVnfMkrkKBVti5l", "l": 100, "r": "v", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "4yAWRTNU93fwEuaGGVK5FC", "l": 100, "r": "n", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "invalid village 1"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "invalid village 0"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 0m0"}, "result": {"msg": "invalid village 0m0"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 0m 0"}, "result": {"msg": "invalid village 0m"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "invalid village 0"}}
+{"player": {"i": "j0NNuDCfPt0pG1MoRcIpJG", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "invalid village 1"}}
+{"player": {"i": "Gfr5g_pYm3wJX30sa2K6JX", "l": 100, "r": "g", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "dFTOQ5Vtf4aTFuv_4llkOl", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "dFTOQ5Vtf4aTFuv_4llkOl", "l": 100, "r": "d", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "invalid village 0"}}
+{"player": {"i": "J8ncvlHngbsD_GA7zaNqu-", "l": 100, "r": "h", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "LY9VxCTXcZfesKbO98Jamf", "l": 100, "r": "s", "v": 1, "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "LY9VxCTXcZfesKbO98Jamf", "l": 100, "r": "s", "v": 1, "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "invalid village 0"}}
+{"player": {"i": "HkB1kuHEoLX64A_vaEbvFg", "l": 100, "r": "n", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "2f0xc6E0Yo6I1oLNrYmcAm", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "2f0xc6E0Yo6I1oLNrYmcAm", "l": 100, "r": "v", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "2f0xc6E0Yo6I1oLNrYmcAm", "l": 100, "r": "v", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "2f0xc6E0Yo6I1oLNrYmcAm", "l": 100, "r": "v", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "cmr_lJ0V7FiqF-Q0EmuCRP", "l": 100, "r": "g", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "cmr_lJ0V7FiqF-Q0EmuCRP", "l": 100, "r": "g", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 2f0xc6E0Yo6I1oLNrYmcAm"}, "result": {"msg": "invalid villager 2f0xc6E0Yo6I1oLNrYmcAm"}}
+{"player": {"i": "cmr_lJ0V7FiqF-Q0EmuCRP", "l": 100, "r": "g", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a cmr_lJ0V7FiqF-Q0EmuCRP"}, "result": {"msg": "cannot attack self g"}}
+{"player": {"i": "cmr_lJ0V7FiqF-Q0EmuCRP", "l": 100, "r": "g", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 2f0xc6E0Yo6I1oLNrYmcAm"}, "result": {"msg": "invalid villager 2f0xc6E0Yo6I1oLNrYmcAm"}}
+{"player": {"i": "h5iKg8Abqipxf-Vg4at_v3", "l": 100, "r": "h", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "h5iKg8Abqipxf-Vg4at_v3", "l": 100, "r": "h", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 2f0xc6E0Yo6I1oLNrYmcAm"}, "result": {"msg": "invalid village 2f0xc6E0Yo6I1oLNrYmcAm"}}
+{"player": {"i": "h5iKg8Abqipxf-Vg4at_v3", "l": 100, "r": "h", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 2f0xc6E0Yo6I1oLNrYmcAm"}, "result": {"msg": "invalid villager 2f0xc6E0Yo6I1oLNrYmcAm"}}
+{"player": {"i": "-aAnH3OPJHhkw2QVh5_6rs", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "-aAnH3OPJHhkw2QVh5_6rs", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "cannot attack self p"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "acted against -aAnH3OPJHhkw2QVh5_6rs", "player_damage": 0, "target_damage": 0}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a zVTAf0tYqpsEuucM9DN5Zk"}, "result": {"msg": "already acted"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "already acted"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "already acted"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "already acted"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "already acted"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "e"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 2"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 2"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "2", "a": true, "b": 0, "e": false}, "action": {"c": "m 2"}, "result": {"move": "2"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "2", "a": true, "b": 0, "e": false}, "action": {"c": "m 2"}, "result": {"move": "2"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "2", "a": true, "b": 0, "e": false}, "action": {"c": "m zVTAf0tYqpsEuucM9DN5Zk"}, "result": {"msg": "invalid village zVTAf0tYqpsEuucM9DN5Zk"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "2", "a": true, "b": 0, "e": false}, "action": {"c": "m zVTAf0tYqpsEuucM9DN5Zk"}, "result": {"msg": "invalid village zVTAf0tYqpsEuucM9DN5Zk"}}
+{"player": {"i": "zVTAf0tYqpsEuucM9DN5Zk", "l": 100, "r": "w", "v": "2", "a": true, "b": 0, "e": false}, "action": {"c": "m -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "L6wDOWYg1msPPA6RxrrgEf", "l": 100, "r": "n", "v": "2", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "a_Do8q4vEgsKo_7HRG0pAf", "l": 100, "r": "h", "v": "2", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "kK7nvaPIdPQ_mRLIf0oydM", "l": 100, "r": "d", "v": "2", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "kK7nvaPIdPQ_mRLIf0oydM", "l": 100, "r": "d", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "kK7nvaPIdPQ_mRLIf0oydM", "l": 100, "r": "d", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"move": "1"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "2", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 2"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "invalid villager -aAnH3OPJHhkw2QVh5_6rs"}}
+{"player": {"i": "l6CEpnPi4Md5k-iTAAAEIq", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a -aAnH3OPJHhkw2QVh5_6rs"}, "result": {"msg": "invalid villager -aAnH3OPJHhkw2QVh5_6rs"}}
+{"player": {"i": "Bq2Xm0qZKtq9Xj95aa7oNJ", "l": 100, "r": "g", "v": "2", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 100, "r": "n", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 100, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 100, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "only during day"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 100, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "acted against 0Goo2KK5j6CxJh_sDfTSs9", "player_damage": -1, "target_damage": -1}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "already acted n"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0Goo2KK5j6CxJh_sDfTSs9", "l": 98, "r": "n", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "already acted"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v 0Goo2KK5j6CxJh_sDfTSs9"}, "result": {"msg": "invalid villager 0Goo2KK5j6CxJh_sDfTSs9"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v Y37aR_cnoERfW6XZrhQeLK"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "Y37aR_cnoERfW6XZrhQeLK", "l": 100, "r": "v", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "not day"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "not day"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "v 1"}, "result": {"msg": "invalid villager 1"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "v K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "not day"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "a K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "cannot attack self w"}}
+{"player": {"i": "9GWgeLbXW_T31ryEVkgRQm", "l": 100, "r": "n", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"msg": "not a day for werewolf"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"move": "1"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 9GWgeLbXW_T31ryEVkgRQm"}, "result": {"msg": "acted against 9GWgeLbXW_T31ryEVkgRQm", "player_damage": -1, "target_damage": 1}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"move": "0"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "0", "a": true, "b": 0, "e": false}, "action": {"c": "v 9GWgeLbXW_T31ryEVkgRQm"}, "result": {"msg": "invalid villager 9GWgeLbXW_T31ryEVkgRQm"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"move": "1"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 9GWgeLbXW_T31ryEVkgRQm"}, "result": {"msg": "already acted"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 9GWgeLbXW_T31ryEVkgRQm"}, "result": {"msg": "already acted"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 9GWgeLbXW_T31ryEVkgRQm"}, "result": {"msg": "already acted"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a K7fIcqHXroJ3G6ByPGv8e2"}, "result": {"msg": "already acted"}}
+{"player": {"i": "K7fIcqHXroJ3G6ByPGv8e2", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 9GWgeLbXW_T31ryEVkgRQm"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "c68Oi2Pw8r96pLrVgKOkMO", "l": 100, "r": "s", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a c68Oi2Pw8r96pLrVgKOkMO"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a c68Oi2Pw8r96pLrVgKOkMO"}, "result": {"msg": "acted against c68Oi2Pw8r96pLrVgKOkMO", "player_damage": 0, "target_damage": 0}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 0"}, "result": {"msg": "not night for vampire"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "m 1"}, "result": {"move": "1"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 0kNYRLeeZaJCZSt4B0H5ik"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a c68Oi2Pw8r96pLrVgKOkMO"}, "result": {"msg": "already acted"}}
+{"player": {"i": "c68Oi2Pw8r96pLrVgKOkMO", "l": 100, "r": "s", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a 0kNYRLeeZaJCZSt4B0H5ik"}, "result": {"msg": "acted against 0kNYRLeeZaJCZSt4B0H5ik", "player_damage": 0, "target_damage": 0}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a c68Oi2Pw8r96pLrVgKOkMO"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a c68Oi2Pw8r96pLrVgKOkMO"}, "result": {"msg": "already acted"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v 0kNYRLeeZaJCZSt4B0H5ik"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "0kNYRLeeZaJCZSt4B0H5ik", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v c68Oi2Pw8r96pLrVgKOkMO"}, "result": {"msg": "voted"}}
+{"player": {"i": "hGyH1EfV92YMc2BmAmJZfB", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "acted against hGyH1EfV92YMc2BmAmJZfB", "player_damage": 0, "target_damage": 0}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "already acted"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "already acted"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "already acted"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "already acted"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "already acted"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 100, "r": "p", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "a hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "already acted"}}
+{"player": {"i": "hGyH1EfV92YMc2BmAmJZfB", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "hGyH1EfV92YMc2BmAmJZfB", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v by3afOUBe0-F3XrubNIoA7"}, "result": {"msg": "not day"}}
+{"player": {"i": "hGyH1EfV92YMc2BmAmJZfB", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v by3afOUBe0-F3XrubNIoA7"}, "result": {"msg": "voted"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 0, "r": "p", "v": "1", "a": false, "b": 0, "e": true}, "action": {"c": "v hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "not day"}}
+{"player": {"i": "by3afOUBe0-F3XrubNIoA7", "l": 0, "r": "p", "v": "1", "a": false, "b": 0, "e": true}, "action": {"c": "v hGyH1EfV92YMc2BmAmJZfB"}, "result": {"msg": "voted"}}
+{"player": {"i": "wEimE0bMyjwKJIF4PKQwbn", "l": 100, "r": "d", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "wEimE0bMyjwKJIF4PKQwbn", "l": 100, "r": "d", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v wEimE0bMyjwKJIF4PKQwbn"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "MogY07l9yo22DUApA7E5RK", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}
+{"player": {"i": "MogY07l9yo22DUApA7E5RK", "l": 100, "r": "w", "v": "1", "a": true, "b": 0, "e": false}, "action": {"c": "v wEimE0bMyjwKJIF4PKQwbn"}, "result": {"msg": "voted"}}
+{"player": {"i": "wEimE0bMyjwKJIF4PKQwbn", "l": 0, "r": "d", "v": "1", "a": false, "b": 0, "e": true}, "action": {"c": "v wEimE0bMyjwKJIF4PKQwbn"}, "result": {"msg": "cannot vote for self"}}
+{"player": {"i": "wEimE0bMyjwKJIF4PKQwbn", "l": 0, "r": "d", "v": "1", "a": false, "b": 0, "e": true}, "action": {"c": "v MogY07l9yo22DUApA7E5RK"}, "result": {"msg": "voted"}}
+{"player": {"i": "n0sXBQjiBjhwYqZYdFBFxO", "l": 100, "r": "v", "v": "1", "a": true, "b": 0, "e": false}, "action": "join", "result": {"result": "connected"}}

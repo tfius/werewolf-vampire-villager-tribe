@@ -4,9 +4,11 @@ names = {
     "n": "Villager",
     "w": "Werewolf",
     "v": "Vampire",
-    "n+e": "Villager Eliminated",
-    "w+e": "Werewolf Eliminated",
-    "v+e": "Vampire Eliminated",
+    "d": "Doctor",
+    "s": "Seer",
+    "g": "Guardian",
+    "p": "Priest",
+    "h": "Hunter",   
 }
 
 KILL_RATE = 1
@@ -16,6 +18,7 @@ class Player:
         self.id = player_id
         self.life = 100
         self.role = None  # Roles like "Villager", "Werewolf", "Vampire"
+        self.eliminated = False
         self.village = None  # The village this player belongs to
         self.has_acted = False
         self.alive = True
@@ -33,6 +36,7 @@ class Player:
             "v": self.village.id,
             "a": self.alive,
             "b": self.ballots,
+            "e": self.eliminated,
         }
         # return { "player" : state }
         return state
@@ -53,15 +57,19 @@ class Player:
     def assign_village(self, village):
         self.village = village
 
+    def random_role(self):
+        self.role = random.choice(list(names.keys()))
+
     def revive(self, game):
         self.alive = True
         self.life = 100
         self.ballots = 0
         self.defend = None
         self.home_village = None
+        self.eliminated = False
         # move to random village
         villages_list = list(game.villages.keys())
-        self.move(game, random.choice(villages_keys))
+        self.move(game, random.choice(villages_list))
         return { "msg": "revived" }
     
     def defense(self, game, villager_key):
@@ -147,6 +155,8 @@ class Player:
                  "target_damage": player_damage }
 
     def vote(self, game, villager_key):
+        if self.alive == False:
+            return { "msg": "dead" }
         if self.has_voted:
             return { "msg":"already voted" }
         if self.village.night:
@@ -210,14 +220,12 @@ class Player:
             if night:
                if self.has_acted:
                   self.change_life(-DIE_RATE)
-               self.has_acted = False
 
         # vampire loses life if they did not attack 
         if self.role == "v":
             if not night:
                if self.has_acted:
                   self.change_life(-DIE_RATE)
-               self.has_acted = False
             
         if self.role == "n": 
             if self.has_acted:
@@ -225,10 +233,10 @@ class Player:
             else:
                if night:
                   self.change_life(-DIE_RATE)
-            self.has_acted = False
+            
                
         # self.change_life(-10)
-        # self.has_acted = False
+        self.has_acted = False
 
         if not night:
            self.has_voted = False

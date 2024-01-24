@@ -4,20 +4,28 @@ import uuid
 import threading
 import queue
 command_queue = queue.Queue() # Global variable to store the command
+villages = []
+players = []
 
 names = {
     "n": "Villager",
     "w": "Werewolf",
     "v": "Vampire",
-    "n+e": "Villager Eliminated",
-    "w+e": "Werewolf Eliminated",
-    "v+e": "Vampire Eliminated",
+    "d": "Doctor",
+    "s": "Seer",
+    "g": "Guardian",
+    "p": "Priest",
+    "h": "Hunter",   
 }
 
 def get_input():
-    while True:
+    try:
+      while True:
         key = input("Enter command (a)ttack [villager], (d)efend [villager], (v)ote [villager], (i)nspect [villager], w(ho) am i , (m)ove [village], (c)hat [message] (q)uit ")
         command_queue.put(key)
+    except KeyboardInterrupt:
+        print("Exiting...")
+        exit(0)
 
 # Start the input thread
 input_thread = threading.Thread(target=get_input)
@@ -31,6 +39,7 @@ class Player:
         self.village = None
         self.alive = False
         self.ballots = 0
+        self.eliminated = False
 
     def state(self): 
         state = {
@@ -45,12 +54,15 @@ class Player:
     
 
 async def process_message(writer, message, player: Player):
+    global villages
+    global players
     # check if message is json
     try:
         data = json.loads(message)
         # print(f"Client received: {data}")
         if "move" in data:
             print(f"Moved to {data['move']}")
+            player.village = data["move"]
             # player.village = data["move"]
         # see if data is in form of { "msg": "message"}
         if "msg" in data:
@@ -77,7 +89,16 @@ async def process_message(writer, message, player: Player):
             print("removed_village: " + str(data["removed_village"]))
 
         if "game" in data:
+            # data["game"]  =  {'v': [{'0': 22, 'night': True}, {'1': 22, 'night': True}], 'p': [{'i': 'JVQE4n68Jh4I89Z-RYx88X', 'l': 100, 'r': 'v', 'v': 1, 'a': True, 'b': 0, 'e': False}]}
             # print("got game", data["game"])
+            
+            villages = list(data["game"]["v"]) # get all villages
+            players = list(data["game"]["p"]) # get all players
+
+            # get all players 
+            # get village player is in 
+            # village = [v for v in data["game"]["v"] if player.village == v.keys()[0]]
+            # print("you are in village", player.village, villages)
             pass 
         if "message" in data:
             print("message", data["message"])
@@ -89,6 +110,7 @@ async def process_message(writer, message, player: Player):
             player.village = new_player["v"] # village
             player.alive = new_player["a"] # alive
             player.ballots = new_player["b"] # ballots
+            player.eliminated = new_player["e"] # eliminated
 
             print(f"{names[player.role]} '{player.id}' {player.life} points in village:{player.village}")
             await send_message(writer, json.dumps(player.state()))
@@ -110,6 +132,9 @@ async def process_message(writer, message, player: Player):
                   print(f"State of {names[player.role]} is {player.alive} (R)evive ? ")
     except ValueError:
         print(f"Cannot convert '{message}' to json")
+    except Exception as e:
+        print(f"Error: {e}")
+        pass
 
 async def listen_for_messages(reader, writer, player: Player):
     while True:
@@ -130,6 +155,20 @@ async def listen_for_messages(reader, writer, player: Player):
             
         if not command_queue.empty():
             command = command_queue.get()
+
+            cmd = command.split(" ")  
+            # check to see if there are 2 arguments and get key from villages or players list (not correct as player might not be in village and command will fail)
+            if cmd.__len__() == 2:
+                # check if second argument is a number and if it is get player id from players list
+                try:
+                    if cmd[0] == "m":
+                       id = villages[int(cmd[1])]["vkey"]
+                    else:
+                       id = players[int(cmd[1])]["i"]
+                    command = cmd[0] + " " + id
+                except Exception as e:
+                    pass
+
             print(f"c: {command}")
             await send_message(writer, json.dumps({"c": command}))
 
