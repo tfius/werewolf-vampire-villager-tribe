@@ -69,8 +69,7 @@ class Player:
         self.eliminated = False
         # move to random village
         villages_list = list(game.villages.keys())
-        self.move(game, random.choice(villages_list))
-        return { "msg": "revived" }
+        return self.move(game, random.choice(villages_list))
     
     def defense(self, game, villager_key):
         if not self.alive:
@@ -87,7 +86,7 @@ class Player:
     def attack(self, game, villager_key):
         if not self.alive:
             return { "msg": "dead" }
-        if self.has_acted:
+        if self.has_acted == True:
             return { "msg": "already acted" }
         
         if self.role == "v" and not self.village.night:
@@ -106,8 +105,28 @@ class Player:
             target_damage = -KILL_RATE
             player_damage = KILL_RATE
             return { "msg": "defended" }
+
+        if(self.role == "d"): # doctors heal at twice the rate
+            target_damage = 2 * KILL_RATE
+
+        if(self.role == "p"): # priests add defence to vampires
+            vampires = [p for p in self.village.players.values() if p.role == "v"] # find vampires in village
+            if vampires.__len__() > 0:
+               other_player.defend = vampires[0]
+        
+        if(self.role == "g"): # guardians heal at twice the rate
+            target_damage = KILL_RATE
+
+        if(self.role == "s"): # seers add defence to werewolves
+           werewolves = [p for p in self.village.players.values() if p.role == "w"] # find werevolves in village
+           if werewolves.__len__() > 0:
+              other_player.defend = werewolves[0]
+
         if(other_player == self and self.role != "n"):
             return { "msg": "cannot attack self " + self.role }
+
+        if(self.role == "h"): # hunters kill at twice the rate
+            target_damage = 5 * KILL_RATE
 
         # normals beat werewolves and vampires at day, beat normals anytime
         if(self.role == "n"):
@@ -145,12 +164,14 @@ class Player:
             target_damage = -KILL_RATE
             player_damage = KILL_RATE
 
+
+
         other_player.change_life(target_damage)
         self.change_life(player_damage)
 
         # other_player.change_life(-1)
         self.has_acted = True
-        return { "msg": "acted against " + other_player.id, 
+        return { "msg": names[self.role] + " acted with " + other_player.id, 
                  "player_damage": target_damage,
                  "target_damage": player_damage }
 
@@ -217,22 +238,16 @@ class Player:
         # Process player life logic, all things must die
         # warewolf loses life if they did not attack
         if self.role == "w": 
-            if night:
-               if self.has_acted:
-                  self.change_life(-DIE_RATE)
+            if not night:
+               self.change_life(DIE_RATE)
 
         # vampire loses life if they did not attack 
         if self.role == "v":
-            if not night:
-               if self.has_acted:
-                  self.change_life(-DIE_RATE)
-            
-        if self.role == "n": 
-            if self.has_acted:
+            if night:
                self.change_life(DIE_RATE)
-            else:
-               if night:
-                  self.change_life(-DIE_RATE)
+            
+        if night:
+            self.change_life(-DIE_RATE)
             
                
         # self.change_life(-10)

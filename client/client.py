@@ -172,7 +172,6 @@ async def listen_for_messages(reader, writer, player: Player):
             print(f"c: {command}")
             await send_message(writer, json.dumps({"c": command}))
 
-
 async def send_message(writer, message):
     writer.write(message.encode())
     await writer.drain()

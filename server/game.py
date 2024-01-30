@@ -24,12 +24,11 @@ class Game:
         self.villages[str(self.village_id)] = Village(str(self.village_id)) # add a new village 
         self.village_id += 1
         print(f"Added new village: {self.village_id-1}")
-        return self.village_id-1
+        return str(self.village_id-1)
 
     def remove_player(self, player):
         player.village.remove_player(player)
-        # remove player from player
-        del self.players[player.id]
+        del self.players[player.id] # remove player from player
         print(f"Removed player: {player.id}")
 
     def assign_new_role(self, player):

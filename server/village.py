@@ -85,8 +85,8 @@ class Village:
                     actions.append(action)
                 
             # # print(f"Village {self.id} is now in {'night' if self.night else 'day'} time: {self.time}")
-            # for player in self.players:
-            #     action = player.live(self.night)
+            for player in self.players.values():
+                action = player.live(self.night)
 
             if not self.night and self.players.values().__len__()>0: # if day starts sort players by ballots
                 # get players in village sorted by ballots
@@ -100,7 +100,7 @@ class Village:
                    sorted_players[0].change_life(-100)
                    sorted_players[0].eliminated = True
                    actions.append( { "eliminated": sorted_players[0].id } )
-                   
+
                 # reset ballots
                 for player in self.players.values():
                     player.ballots = 0
